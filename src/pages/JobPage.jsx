@@ -131,5 +131,6 @@ const jobLoader = async ( { params }) => {
     return data;
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export {JobPage as default, jobLoader}; 
 // We will import it in app.jsx and pass this function as a prop back to this page
