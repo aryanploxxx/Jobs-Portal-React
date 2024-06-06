@@ -7,10 +7,10 @@ export default defineConfig({
   server: {
     port: 3000,
   },
-  build: {
-    rollupOptions: {
-      external: ['react-router-dom', 'react-icons/fa']
-    }
-  }
+  // build: {
+  //   rollupOptions: {
+  //     external: ['react-router-dom', 'react-icons/fa']
+  //   }
+  // }
 
 })

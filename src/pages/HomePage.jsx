@@ -9,7 +9,7 @@ const HomePage = () => {
         {/* Notice how we are not using navbar anymore, this is because of the react layouts, every page will use the layout imported inside them and every page can have different layouts */}
         <Hero />
         <HomeCards />
-        <JobListings />
+        <JobListings isHome="true"/>
         <ViewAllJobs />
     </>
   )
