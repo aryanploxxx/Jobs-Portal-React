@@ -83,34 +83,6 @@
         "contactEmail": "contact@ipsumlorem.com",
         "contactPhone": "555-555-5555"
       }
-    },
-    {
-      "id": "a137",
-      "title": "j",
-      "type": "Full-Time",
-      "location": "j",
-      "description": "j",
-      "salary": "Under $50K",
-      "company": {
-        "name": "j",
-        "description": "j",
-        "contactEmail": "j@j.k",
-        "contactPhone": "j"
-      }
-    },
-    {
-      "id": "31d7",
-      "title": "k",
-      "type": "Full-Time",
-      "location": "k",
-      "description": "k",
-      "salary": "Under $50K",
-      "company": {
-        "name": "k",
-        "description": "k",
-        "contactEmail": "k@k.l",
-        "contactPhone": "k"
-      }
     }
   ]
 }

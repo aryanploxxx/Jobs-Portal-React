@@ -1,5 +1,7 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from '../components/Navbar'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const MainLayout = () => {
   return (
@@ -8,6 +10,8 @@ const MainLayout = () => {
         <Navbar />
         <Outlet />
         {/* Outlet refers to the remaining content */}
+        <ToastContainer />
+        {/* ToastContainer can be put up anywhere, it is anyways positioned absolute and position can be changed via props */}
     </>
   )
 }
