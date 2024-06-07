@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGODBURI)
 
 const Job = require('./models/job')
 const jobRouter = require('./routers/jobRouter')
-app.use("/jobs", jobRouter)
+app.use("/api/jobs", jobRouter)
 
 app.get('/', (req, res) => {
     try {
