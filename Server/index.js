@@ -19,6 +19,14 @@ const Job = require('./models/job')
 const jobRouter = require('./routers/jobRouter')
 app.use("/jobs", jobRouter)
 
+app.get('/', (req, res) => {
+    try {
+        res.status(200).json({"Message": "API is working fine!"})
+    } catch (err) {
+        console.log(`Error: ${err}`);
+        return res.status(500).json({ "Error in fetching API": err });
+    }
+})
 
 app.listen(port, ()=> {
     console.log(`Server is running on port: ${port}`);
