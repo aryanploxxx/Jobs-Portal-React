@@ -21,23 +21,20 @@ const EditJobPage = ({updateJobSubmit}) => {
     
     const navigate = useNavigate();
     const { id } = useParams();
-
     const submitForm = (e) => {
         e.preventDefault();
 
         const updatedJob = {
-        id,
-        title,
-        type,
-        location,
-        description,
-        salary,
-        company: {
+            id,
+            title,
+            type,
+            location,
+            description,
+            salary,
             name: companyName,
-            description: companyDescription,
-            contactEmail,
-            contactPhone,
-        },
+            company_description: companyDescription,
+            contact_email: contactEmail,
+            contact_phone: contactPhone
         };
 
         updateJobSubmit(updatedJob);

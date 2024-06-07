@@ -15,10 +15,12 @@ const JobListings = ({ isHome = false }) => {
     useEffect( () => {
         const fetchJobs = async () => {
             const apiUrl = isHome ? '/api/jobs?_limit=3' : '/api/jobs'
+            // will have to changes this code
             try {
                 const res = await fetch(apiUrl);
                 const data = await res.json();
-                setJobs(data);
+                // console.log(data.allJobs)
+                setJobs(data.allJobs);
             } catch(err) {
                 console.log(`Error: ${err}`)
             } finally {
@@ -40,7 +42,7 @@ const JobListings = ({ isHome = false }) => {
                 <>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         {jobs.map((job) => (
-                            <JobListing key={job.id} job={job}/>
+                            <JobListing key={job._id} job={job}/>
                         ))}
                     </div>
                 </> } 

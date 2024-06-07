@@ -27,14 +27,11 @@ const AddJobPage = ({ addJobSubmit }) => {
             location,
             description,
             salary,
-            company: {
-              name: companyName,
-              description: companyDescription,
-              contactEmail,
-              contactPhone,
-            },
+            name: companyName,
+            company_description: companyDescription,
+            contact_email: contactEmail,
+            contact_phone: contactPhone
         };
-        // console.log(newJob)
         addJobSubmit(newJob);
         toast.success("Job Added Successfully")
         // We can also do toast.error, can also change it's positions, add custom logos

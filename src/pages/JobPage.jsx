@@ -118,12 +118,12 @@ const JobPage = ({ deleteJob }) => {
                         <div className="bg-white p-6 rounded-lg shadow-md mt-6">
                             <h3 className="text-xl font-bold mb-6">Manage Job</h3>
                             <Link
-                                to= { `/edit-job/${id}` }
+                                to= { `/edit-job/${job._id}` }
                                 className="bg-indigo-500 hover:bg-indigo-600 text-white text-center font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
                                 Edit Job
                             </Link>
                             
-                            <button onClick={() => onDeleteClick(job.id)} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
+                            <button onClick={() => onDeleteClick(job._id)} className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline mt-4 block">
                                 Delete Job
                             </button>
                         </div>
@@ -137,8 +137,8 @@ const JobPage = ({ deleteJob }) => {
 
 const jobLoader = async ( { params }) => {
     const res = await fetch(`/api/jobs/${params.id}`)
-    const data = res.json();
-    return data;
+    const data = await res.json();
+    return data.job;
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
