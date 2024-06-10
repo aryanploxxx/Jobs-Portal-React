@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom'
 const Navbar = () => {
 
   const linkClass = ( {isActive} ) => (
-    isActive ? 'text-white bg-[#416bf3] hover:bg-[#283547] hover:text-white rounded-md px-4 py-2' : 'text-[#283547] hover:bg-gray-900 hover:text-white rounded-md px-4 py-2'
+    isActive ? 'text-white bg-[#416bf3] hover:bg-[#698af6] hover:text-white rounded-md px-4 py-2' : 'text-[#283547] hover:bg-[#416bf3] hover:text-white rounded-md px-4 py-2'
   )
 
   return (
